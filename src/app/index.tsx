@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Home() {
   const [category, setCategory] = useState<string>(CATEGORIES[0]);
 
-  function handleCategoruSelect(selectedCategory: string) {
+  function handleCategorySelect(selectedCategory: string) {
     setCategory(selectedCategory);
   }
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           <CategoryButton
             title={item}
             isSelected={item === category}
-            onPress={() => handleCategoruSelect(item)}
+            onPress={() => handleCategorySelect(item)}
           />
         )}
         horizontal
